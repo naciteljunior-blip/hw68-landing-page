@@ -1594,7 +1594,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="https://pay.finaliza.shop/pl/5bbf3ca191" id="btn-kit-casal" class="block w-full text-center text-white py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-2xl" style="background:#0071e3; text-decoration:none; border-radius:980px;" target="_blank">
+                            <a href="https://pay.finaliza.shop/pl/bda2292853" id="btn-kit-casal" class="block w-full text-center text-white py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-2xl" style="background:#0071e3; text-decoration:none; border-radius:980px;" target="_blank">
                                 QUERO O KIT CASAL AGORA
                             </a>
                             <p class="text-center text-white/90 text-xs mt-4">
@@ -1651,7 +1651,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="https://pay.finaliza.shop/pl/6706054f8c" id="btn-unidade" class="block w-full text-center bg-gray-600 hover:bg-gray-500 text-white py-3 rounded-xl font-bold transition-all" style="margin-top:auto; text-decoration:none; border-radius:980px;" target="_blank">
+                            <a href="https://pay.finaliza.shop/pl/88dba4e1dd" id="btn-unidade" class="block w-full text-center bg-gray-600 hover:bg-gray-500 text-white py-3 rounded-xl font-bold transition-all" style="margin-top:auto; text-decoration:none; border-radius:980px;" target="_blank">
                                 Escolher Esta Opção
                             </a>
                         </div>
@@ -2025,7 +2025,7 @@
                 Apenas 14 kits restantes com 25% de desconto e frete grátis.<br/>
                 Garanta agora o presente perfeito para vocês dois!
             </p>
-            <a href="#oferta" class="inline-block text-white px-12 py-5 rounded-full text-xl font-bold transition-all transform hover:scale-105" style="background: #0071e3; box-shadow: none; ">
+            <a href="https://pay.finaliza.shop/pl/bda2292853" id="btn-urgencia" class="inline-block text-white px-12 py-5 rounded-full text-xl font-bold transition-all transform hover:scale-105" style="background: #0071e3; box-shadow: none; " target="_blank">
                 GARANTIR MEU KIT CASAL AGORA
             </a>
             <p class="text-gray-400 mt-6 text-sm">
@@ -2073,7 +2073,7 @@
     <!-- Sticky Mobile CTA -->
     <div class="sticky-cta shadow-2xl" id="mobileCTA">
         <div class="container mx-auto px-4 py-4">
-            <a href="#oferta" class="block text-white text-center py-4 rounded-xl font-bold text-lg" style="background: #0071e3;">
+            <a href="https://pay.finaliza.shop/pl/bda2292853" id="btn-mobile-cta" class="block text-white text-center py-4 rounded-xl font-bold text-lg" style="background: #0071e3;" target="_blank">
                 COMPRAR AGORA - KIT CASAL R$ 297
             </a>
         </div>
@@ -2163,23 +2163,91 @@
     </script>
 <script>
 (function(){
+
+    /* ── MAPEAMENTO DE LINKS ─────────────────────────────────────── */
+    var links = {
+        unidade: {
+            prata : 'https://pay.finaliza.shop/pl/88dba4e1dd',
+            preto  : 'https://pay.finaliza.shop/pl/e1128c3d5c'
+        },
+        kit: {
+            'prata-prata' : 'https://pay.finaliza.shop/pl/bda2292853',
+            'preto-preto' : 'https://pay.finaliza.shop/pl/008e654c12',
+            'misto'       : 'https://pay.finaliza.shop/pl/aad3063aff'
+        }
+    };
+
+    /* ── IMAGENS ─────────────────────────────────────────────────── */
     var imgPrata = 'img/watch-prata.png';
     var imgPreto = 'img/watch-preto.png';
-    
+
+    /* ── HELPERS ─────────────────────────────────────────────────── */
+    function getChecked(name) {
+        var el = document.querySelector('input[name="' + name + '"]:checked');
+        return el ? el.value : 'prata';
+    }
+
+    function swapImage(imgId, value) {
+        var img = document.getElementById(imgId);
+        if (!img) return;
+        img.style.opacity = '0';
+        setTimeout(function(){
+            img.src = value === 'prata' ? imgPrata : imgPreto;
+            img.style.opacity = '1';
+        }, 150);
+    }
+
+    /* ── ACTUALIZAR BOTÃO DE 1 UNIDADE ───────────────────────────── */
+    function updateUnidade() {
+        var cor   = getChecked('cor-unit');
+        var url   = links.unidade[cor] || links.unidade.prata;
+        var btn   = document.getElementById('btn-unidade');
+        if (btn) btn.href = url;
+    }
+
+    /* ── ACTUALIZAR BOTÕES DO KIT CASAL ──────────────────────────── */
+    function updateKit() {
+        var cor1  = getChecked('cor-kit-1');
+        var cor2  = getChecked('cor-kit-2');
+        var key, url;
+
+        if (cor1 === 'prata' && cor2 === 'prata') {
+            key = 'prata-prata';
+        } else if (cor1 === 'preto' && cor2 === 'preto') {
+            key = 'preto-preto';
+        } else {
+            key = 'misto';
+        }
+        url = links.kit[key];
+
+        var btnKit    = document.getElementById('btn-kit-casal');
+        var btnUrg    = document.getElementById('btn-urgencia');
+        var btnMobile = document.getElementById('btn-mobile-cta');
+        if (btnKit)    btnKit.href    = url;
+        if (btnUrg)    btnUrg.href    = url;
+        if (btnMobile) btnMobile.href = url;
+    }
+
+    /* ── LISTENERS ───────────────────────────────────────────────── */
     document.querySelectorAll('input[name="cor-unit"], input[name="cor-kit-1"], input[name="cor-kit-2"]').forEach(function(radio){
         radio.addEventListener('change', function(){
+            /* trocar imagem com fade */
             var targetMap = {'cor-unit':'img-cor-unit','cor-kit-1':'img-cor-kit-1','cor-kit-2':'img-cor-kit-2'};
-            var target = targetMap[this.name];
-            var img = document.getElementById(target);
-            if(img){
-                img.style.opacity = '0';
-                setTimeout(function(){
-                    img.src = radio.value === 'prata' ? imgPrata : imgPreto;
-                    img.style.opacity = '1';
-                }, 150);
+            swapImage(targetMap[this.name], this.value);
+
+            /* actualizar links */
+            if (this.name === 'cor-unit') {
+                updateUnidade();
+            } else {
+                updateKit();
             }
         });
     });
+
+    /* ── INICIALIZAÇÃO (estado padrão: Prata + Prata) ────────────── */
+    updateUnidade();
+    updateKit();
+
 })();
 </script>
 </body>
