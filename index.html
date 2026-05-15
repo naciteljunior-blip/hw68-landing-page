@@ -879,20 +879,38 @@
                 align-items: center;
             " class="hero-grid">
 
-                <!-- COLUNA ESQUERDA: Imagem dos relógios -->
+                <!-- COLUNA ESQUERDA: Vídeo 360° com moldura -->
                 <div style="position: relative; display: flex; justify-content: center; align-items: center;" class="hero-img-col">
-                    <img
-                        src="watches-nobg.png"
-                        alt="Três smartwatches HW68 Ultra Mini nas cores cinza, preto e laranja com telas ligadas mostrando diferentes mostradores"
-                        style="
-                            display: block;
-                            max-width: 100%;
-                            width: 480px;
-                            height: auto;
-                            object-fit: contain;
-                            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
-                        "
-                    />
+
+                    <div style="position: relative; display: inline-block; padding: 40px;">
+
+                        <!-- Explosão 1 - Azul -->
+                        <div style="position: absolute; top: 10%; left: -10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0,113,227,0.7) 0%, rgba(0,113,227,0) 70%); filter: blur(40px); border-radius: 50%; animation: float 5s ease-in-out infinite; z-index: 0;"></div>
+                        <!-- Explosão 2 - Rosa -->
+                        <div style="position: absolute; bottom: 5%; right: -15%; width: 220px; height: 220px; background: radial-gradient(circle, rgba(236,72,153,0.65) 0%, rgba(236,72,153,0) 70%); filter: blur(45px); border-radius: 50%; animation: float 4s ease-in-out infinite reverse; z-index: 0;"></div>
+                        <!-- Explosão 3 - Laranja -->
+                        <div style="position: absolute; top: 50%; right: -5%; width: 160px; height: 160px; background: radial-gradient(circle, rgba(255,159,10,0.6) 0%, rgba(255,159,10,0) 70%); filter: blur(35px); border-radius: 50%; animation: float 6s ease-in-out infinite; z-index: 0;"></div>
+                        <!-- Explosão 4 - Verde -->
+                        <div style="position: absolute; top: -5%; right: 30%; width: 140px; height: 140px; background: radial-gradient(circle, rgba(48,209,88,0.5) 0%, rgba(48,209,88,0) 70%); filter: blur(35px); border-radius: 50%; animation: float 5.5s ease-in-out infinite reverse; z-index: 0;"></div>
+                        <!-- Explosão 5 - Roxo -->
+                        <div style="position: absolute; bottom: 15%; left: 0%; width: 180px; height: 180px; background: radial-gradient(circle, rgba(191,90,242,0.55) 0%, rgba(191,90,242,0) 70%); filter: blur(40px); border-radius: 50%; animation: float 4.5s ease-in-out infinite; z-index: 0;"></div>
+
+                        <!-- Vídeo 360° do relógio com moldura metálica -->
+                        <div style="position: relative; z-index: 1; display: inline-block;">
+                            <div style="padding: 3px; border-radius: 18px; background: linear-gradient(145deg, #6e6e73 0%, #3a3a3c 40%, #6e6e73 70%, #3a3a3c 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 24px 64px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);">
+                                <div style="border-radius: 16px; overflow: hidden; background: #000; line-height: 0; position: relative; width: 440px; max-width: 90vw;">
+                                    <video autoplay muted loop playsinline style="display: block; width: 140%; margin-left: 5%; height: auto;">
+                                        <source src="video-quadrado.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <!-- Reflexo no topo -->
+                            <div style="position: absolute; top: 3px; left: 8px; right: 8px; height: 35%; border-radius: 14px 14px 0 0; background: linear-gradient(to bottom, rgba(255,255,255,0.07), transparent); pointer-events: none; z-index: 3;"></div>
+                        </div>
+
+                        <!-- Badge flutuante -->
+                        <div class="float-badge" style="position: absolute; bottom: 20px; right: 0px; z-index: 2; background: #0071e3; color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 13px; padding: 10px 18px; border-radius: 50px; box-shadow: 0 4px 16px rgba(0,113,227,0.5); white-space: nowrap;">Tela Infinita 1.75"</div>
+                    </div>
                 </div>
                 <!-- COLUNA DIREITA: Texto -->
                 <div style="text-align: left;" class="hero-text-col">
