@@ -43,7 +43,7 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
     <!-- Canonical -->
     <link rel="canonical" href="https://seusite.com.br/">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -790,6 +790,56 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
             }
         }
     </style>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O Aura Ultra Serie 9 é compatível com meu celular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Funciona com iPhone (iOS 9.0 ou superior) e Android (5.0 ou superior). Basta baixar o app gratuito e conectar via Bluetooth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é o prazo de entrega?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo médio é de 7 a 15 dias úteis para todo o Brasil. Para o Kit Casal o frete é GRÁTIS! Você receberá o código de rastreamento assim que o pedido for despachado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O relógio tem garantia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Garantia de 6 meses para compras individuais e 1 ano estendido para o Kit Casal. Você também tem 7 dias para devolução conforme o Código de Defesa do Consumidor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar o relógio na piscina ou no banho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Aura Ultra Serie 9 possui certificação IP67 — resistente a água e poeira em condições normais. Pode usar na chuva e ao lavar as mãos, mas não é recomendado para natação prolongada ou mergulho."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o parcelamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parcele em até 12x sem juros no cartão. Kit Casal: 12x de R$ 29,90. Aceitamos também Pix com 5% de desconto adicional!"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50" style="background:#f5f5f7;">
 
@@ -947,7 +997,7 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
                             <div style="padding: 3px; border-radius: 18px; background: linear-gradient(145deg, #6e6e73 0%, #3a3a3c 40%, #6e6e73 70%, #3a3a3c 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 24px 64px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);">
                                 <div style="border-radius: 16px; overflow: hidden; background: #000; line-height: 0; position: relative; width: 440px; max-width: 90vw;">
                                     <video autoplay muted loop playsinline style="display: block; width: 140%; margin-left: 5%; height: auto;">
-                                        <source src="video-quadrado.mp4" type="video/mp4">
+                                        <source src="videos/video-quadrado.mp4" type="video/mp4">
                                     </video>
                                 </div>
                             </div>
@@ -1047,77 +1097,77 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
     </section>
 
     <!-- Grid de Diferenciais -->
-    <section class="py-16" style="background:#111;">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
                 Tecnologia Premium em Cada Detalhe
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                 <!-- Diferencial 1 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Chamadas Bluetooth</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">Microfone e alto-falante integrados</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Chamadas Bluetooth</h3>
+                    <p class="text-sm text-gray-600">Microfone e alto-falante integrados</p>
                 </div>
 
                 <!-- Diferencial 2 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Tela Infinita 1.75"</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">Bordas mínimas, cores vibrantes</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Tela Infinita 1.75"</h3>
+                    <p class="text-sm text-gray-600">Bordas mínimas, cores vibrantes</p>
                 </div>
 
                 <!-- Diferencial 3 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Saúde Completa</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">Cardíaco, SpO2 e Sono</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Saúde Completa</h3>
+                    <p class="text-sm text-gray-600">Cardíaco, SpO2 e Sono</p>
                 </div>
 
                 <!-- Diferencial 4 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Resistência IP67</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">À prova d'água e poeira</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Resistência IP67</h3>
+                    <p class="text-sm text-gray-600">À prova d'água e poeira</p>
                 </div>
 
                 <!-- Diferencial 5 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 100-6 3 3 0 000 6z"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Bateria Poderosa</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">De 2 a 7 dias de uso</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Bateria Poderosa</h3>
+                    <p class="text-sm text-gray-600">De 2 a 7 dias de uso</p>
                 </div>
 
                 <!-- Diferencial 6 -->
-                <div class="p-6 rounded-2xl text-center transition-all transform hover:-translate-y-2" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);">
-                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background:rgba(0,113,227,0.15);">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="#0071e3" viewBox="0 0 24 24">
+                <div class="p-6 rounded-2xl text-center hover:shadow-xl transition-all transform hover:-translate-y-2">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                         </svg>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Design Compacto</h3>
-                    <p class="text-sm" style="color:rgba(255,255,255,0.5);">Caixa ergonômica de 41mm</p>
+                    <h3 class="font-bold text-gray-900 mb-2">Design Compacto</h3>
+                    <p class="text-sm text-gray-600">Caixa ergonômica de 41mm</p>
                 </div>
             </div>
         </div>
@@ -1145,7 +1195,7 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
 
                     <!-- Relógio central -->
                     <div class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-                        <img src="notifi-watch.png" alt="Notificação no Aura Ultra Serie 9"
+                        <img src="img/notifi-watch.png" alt="Notificação no Aura Ultra Serie 9"
                             style="
                                 width: 200px;
                                 height: auto;
@@ -1438,14 +1488,14 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
     </script>
 
     <!-- Seção Casal Fitness -->
-    <section class="relative overflow-hidden" style="background: linear-gradient(180deg, #f5f5f7 0%, #eaeaec 100%); padding: 100px 0;">
+    <section class="relative overflow-hidden" style="background: #000; padding: 100px 0;">
         <div class="container mx-auto px-4">
             <div class="text-center mb-14">
                 <span class="inline-block text-xs font-bold uppercase tracking-widest mb-4" style="color:#0071e3; letter-spacing:0.15em;">Treino em Dupla</span>
-                <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1d1d1f; letter-spacing:-0.03em; line-height:1.1;">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#f5f5f7; letter-spacing:-0.03em; line-height:1.1;">
                     Juntos no Ritmo,<br>Conectados na Performance
                 </h2>
-                <p class="text-lg md:text-xl" style="color:#86868b; max-width:560px; margin:0 auto; line-height:1.6;">
+                <p class="text-lg md:text-xl" style="color:rgba(255,255,255,0.5); max-width:560px; margin:0 auto; line-height:1.6;">
                     O Melhor Treino é Aquele que Vocês Compartilham
                 </p>
             </div>
@@ -1478,45 +1528,45 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
 
                 <!-- Coluna direita: texto + benefícios -->
                 <div class="flex-1">
-                    <p class="text-base md:text-lg mb-10" style="color:#6e6e73; line-height:1.8; max-width:480px;">
-                        Treinar junto é mais do que dividir o percurso — é motivar, competir e celebrar cada conquista. Com o <strong style="color:#1d1d1f;">Aura Ultra Serie 9</strong>, os dois monitoram frequência cardíaca, calorias, passos e performance em tempo real.
+                    <p class="text-base md:text-lg mb-10" style="color:rgba(255,255,255,0.55); line-height:1.8; max-width:480px;">
+                        Treinar junto é mais do que dividir o percurso — é motivar, competir e celebrar cada conquista. Com o <strong style="color:#f5f5f7;">Aura Ultra Serie 9</strong>, os dois monitoram frequência cardíaca, calorias, passos e performance em tempo real.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
-                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
                             <div style="width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,#ff375f,#ff6b8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-sm mb-1" style="color:#1d1d1f;">Monitoramento em Dobro</h4>
-                                <p class="text-xs" style="color:#86868b; line-height:1.5;">Batimentos, SpO2 e calorias em tempo real para os dois</p>
+                                <h4 class="font-bold text-sm mb-1" style="color:#f5f5f7;">Monitoramento em Dobro</h4>
+                                <p class="text-xs" style="color:rgba(255,255,255,0.45); line-height:1.5;">Batimentos, SpO2 e calorias em tempo real para os dois</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
                             <div style="width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,#30d158,#5dd67a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-sm mb-1" style="color:#1d1d1f;">Motivação Mútua</h4>
-                                <p class="text-xs" style="color:#86868b; line-height:1.5;">Compartilhem metas e comemorem conquistas juntos</p>
+                                <h4 class="font-bold text-sm mb-1" style="color:#f5f5f7;">Motivação Mútua</h4>
+                                <p class="text-xs" style="color:rgba(255,255,255,0.45); line-height:1.5;">Compartilhem metas e comemorem conquistas juntos</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
                             <div style="width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,#0071e3,#40a0ff); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-sm mb-1" style="color:#1d1d1f;">Design Confortável</h4>
-                                <p class="text-xs" style="color:#86868b; line-height:1.5;">Leve e ergonômico, perfeito para qualquer atividade</p>
+                                <h4 class="font-bold text-sm mb-1" style="color:#f5f5f7;">Design Confortável</h4>
+                                <p class="text-xs" style="color:rgba(255,255,255,0.45); line-height:1.5;">Leve e ergonômico, perfeito para qualquer atividade</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
                             <div style="width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,#ff9f0a,#ffb340); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-sm mb-1" style="color:#1d1d1f;">Conectividade Total</h4>
-                                <p class="text-xs" style="color:#86868b; line-height:1.5;">Bluetooth 5.2 e notificações sincronizadas</p>
+                                <h4 class="font-bold text-sm mb-1" style="color:#f5f5f7;">Conectividade Total</h4>
+                                <p class="text-xs" style="color:rgba(255,255,255,0.45); line-height:1.5;">Bluetooth 5.2 e notificações sincronizadas</p>
                             </div>
                         </div>
                     </div>
@@ -1755,7 +1805,7 @@ src="https://www.facebook.com/tr?id=1457637889443508&ev=PageView&noscript=1"
     </section>
 
     <!-- Especificações Técnicas -->
-    <section class="py-20 overflow-hidden" style="background:#111;">
+    <section class="py-20 bg-white overflow-hidden">
         <div class="container mx-auto px-4" style="max-width:1200px;">
 
             <!-- Layout dois colunas: specs + imagem -->
